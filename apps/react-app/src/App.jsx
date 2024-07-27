@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import LoginForm from 'login-form'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <p>React version in app: {React.version}</p>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -52,6 +54,8 @@ function App() {
 
         <input type="submit" />
       </form>
+
+      <LoginForm />
     </>
   )
 }

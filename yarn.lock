@@ -2534,6 +2534,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"login-form@workspace:^, login-form@workspace:packages/login-form":
+  version: 0.0.0-use.local
+  resolution: "login-form@workspace:packages/login-form"
+  dependencies:
+    "@types/react": ^18.3.3
+    "@types/react-dom": ^18.3.0
+    "@vitejs/plugin-react": ^4.3.1
+    eslint: ^8.57.0
+    eslint-plugin-react: ^7.34.3
+    eslint-plugin-react-hooks: ^4.6.2
+    eslint-plugin-react-refresh: ^0.4.7
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-hook-form: ^7.52.1
+    vite: ^5.3.4
+  languageName: unknown
+  linkType: soft
+
 "loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -2945,7 +2963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.39":
+"postcss@npm:^8.4.38, postcss@npm:^8.4.39":
   version: 8.4.40
   resolution: "postcss@npm:8.4.40"
   dependencies:
@@ -3016,10 +3034,11 @@ __metadata:
     eslint-plugin-react: ^7.34.3
     eslint-plugin-react-hooks: ^4.6.2
     eslint-plugin-react-refresh: ^0.4.7
+    login-form: "workspace:^"
     react: 19.0.0-rc-14a4699f-20240725
     react-dom: 19.0.0-rc-14a4699f-20240725
     react-hook-form: ^7.52.1
-    vite: ^5.3.4
+    vite: 6.0.0-alpha.18
   languageName: unknown
   linkType: soft
 
@@ -3728,6 +3747,46 @@ __metadata:
   resolution: "vite-duplicated-react-repro@workspace:."
   languageName: unknown
   linkType: soft
+
+"vite@npm:6.0.0-alpha.18":
+  version: 6.0.0-alpha.18
+  resolution: "vite@npm:6.0.0-alpha.18"
+  dependencies:
+    esbuild: ^0.21.3
+    fsevents: ~2.3.3
+    postcss: ^8.4.38
+    rollup: ^4.13.0
+  peerDependencies:
+    "@types/node": ^18.0.0 || >=20.0.0
+    less: "*"
+    lightningcss: ^1.21.0
+    sass: "*"
+    stylus: "*"
+    sugarss: "*"
+    terser: ^5.4.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    less:
+      optional: true
+    lightningcss:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    terser:
+      optional: true
+  bin:
+    vite: bin/vite.js
+  checksum: 4e72459cb14aa3556b230fc03c322083580a3bc312f8b8f3638adc9b81a198b9ec515b61cbcd7f81db7a35f1fd21ac7297046e7ce930e5201e537dd55f12b181
+  languageName: node
+  linkType: hard
 
 "vite@npm:^5.3.4":
   version: 5.3.5
