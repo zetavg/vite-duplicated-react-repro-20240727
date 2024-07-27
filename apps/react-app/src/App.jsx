@@ -1,10 +1,22 @@
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
+
+  console.log(watch("example")) // watch input value by passing the name of it
 
   return (
     <>
@@ -28,6 +40,18 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {/* register your input into the hook by invoking the "register" function */}
+        <input defaultValue="test" {...register("example")} />
+
+        {/* include validation with required or other standard HTML validation rules */}
+        <input {...register("exampleRequired", { required: true })} />
+        {/* errors will return when field validation fails  */}
+        {errors.exampleRequired && <span>This field is required</span>}
+
+        <input type="submit" />
+      </form>
     </>
   )
 }
